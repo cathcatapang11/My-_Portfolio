@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine Catapang | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- WELCOME SPLASH -->
+<div id="welcome" class="welcome-overlay">
+    <div class="welcome-icons">
+        <div class="welcome-icon-box">
+            <span class="welcome-code-icon">&lt;/&gt;</span>
+        </div>
+        <div class="welcome-icon-box">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+        </div>
+    </div>
+    <p class="welcome-sub">// Welcome to</p>
+    <h1 class="welcome-title">MY <span>PORTFOLIO</span></h1>
+    <!-- UPDATE href AND text below with your real Vercel URL after deploying -->
+    <a href="index.html" class="welcome-name">cathcatapang.vercel.app</a>
+    <div class="welcome-bar-wrap">
+        <div class="welcome-bar-fill"></div>
+    </div>
+</div>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo"><img src="images/my logo.png" alt="Catherine Catapang Logo"><span class="nav-logo-text">DEVCATCH</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero"       class="nav-a active">Home</a></li>
+            <li><a href="#about"      class="nav-a">About</a></li>
+            <li><a href="#experience" class="nav-a">Experience</a></li>
+            <li><a href="#portfolio"  class="nav-a">Portfolio</a></li>
+            <li><a href="#contact"    class="nav-a">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ HERO -->
+<section id="hero" class="hero">
+    <div style="max-width:900px; text-align:center;">
+        <div class="status-badge">
+            <span class="status-dot"></span> Available for opportunities
+        </div>
+        <p class="hero-greeting">// Hello, World!</p>
+        <h1 class="glitch" data-text="CATHERINE CATAPANG">CATHERINE CATAPANG</h1>
+        <p class="hero-sub">
+            I'm a <span class="typed" id="typewriter"></span><span class="cursor"></span>
+        </p>
+        <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+            <a href="#about"     class="btn btn-outline">About Me</a>
+        </div>
+    </div>
+    <!-- floating code symbols -->
+    <div class="csym csym-1" aria-hidden="true">{}</div>
+    <div class="csym csym-2" aria-hidden="true">&lt;/&gt;</div>
+    <div class="csym csym-3" aria-hidden="true">=&gt;</div>
+    <div class="csym csym-4" aria-hidden="true">( )</div>
+    <div class="csym csym-5" aria-hidden="true">;</div>
+    <div class="csym csym-6" aria-hidden="true">[ ]</div>
+
+    <div class="scroll-indicator">
+        <p>Scroll</p>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ABOUT -->
+<section id="about">
+    <div class="section">
+        <p class="section-label reveal">01 — About</p>
+        <h2 class="section-title reveal d1">Who I <span>Am</span></h2>
+
+        <div class="about-grid">
+            <div class="about-img-wrapper reveal d1">
+                <div class="img-ring-outer"></div>
+                <div class="img-ring-inner"></div>
+                <div class="img-dot dot-tl"></div>
+                <div class="img-dot dot-tr"></div>
+                <div class="img-dot dot-bl"></div>
+                <div class="img-dot dot-br"></div>
+                <div class="about-img-box">
+                    <img src="images/My Profile.jpg" alt="Catherine Catapang">
+                    <div class="corner tl"></div>
+                    <div class="corner tr"></div>
+                    <div class="corner bl"></div>
+                    <div class="corner br"></div>
+                </div>
+            </div>
+
+            <div class="about-text reveal d2">
+                <p>Hi! I'm <strong>Catherine Catapang</strong>, a passionate <strong>Web Developer</strong> and a graduate of <strong>BS Computer Engineering</strong>. I have hands-on experience building and maintaining full-stack web applications for real-world clients.</p>
+                <p>I specialize in <strong>React.js</strong> and <strong>Material UI</strong> on the front-end, and have built back-end modules using <strong>PHP Laravel</strong>. I also manage <strong>MySQL</strong> databases and create <strong>Power BI</strong> dashboards for data visualization.</p>
+                <p>Beyond development, I have a strong background in <strong>QA testing</strong> — writing test cases, tracking defects, and ensuring software quality. I also have experience in <strong>mobile testing</strong>, and I bridge the gap between development and quality assurance.</p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-n">2+</div>
+                        <div class="stat-l">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-n">1.5+</div>
+                        <div class="stat-l">Yrs Exp</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-n">∞</div>
+                        <div class="stat-l">Curiosity</div>
+                    </div>
+                </div>
+
+                <p class="badges-label">Tech Stack</p>
+                <div class="tech-badges">
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">React.js</span>
+                    <span class="badge">Material UI</span>
+                    <span class="badge">PHP Laravel</span>
+                    <span class="badge">MySQL</span>
+                    <span class="badge">Power BI</span>
+                    <span class="badge">HTML & CSS</span>
+                    <span class="badge">Git</span>
+                    <span class="badge">QA Testing</span>
+                    <span class="badge">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ EXPERIENCE -->
+<section id="experience">
+    <div class="section">
+        <p class="section-label reveal">02 — Experience</p>
+        <h2 class="section-title reveal d1">Work <span>Experience</span></h2>
+
+        <div class="timeline">
+
+            <!-- JOB 1 -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">IT Specialist & QA Tester</h3>
+                            <p class="timeline-company">Utility Solutions Industries</p>
+                        </div>
+                        <span class="timeline-date">July 2024 – Present</span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Plan, design, and execute manual test cases and test scripts for utility management systems</li>
+                        <li>Identify, document, and track software defects through the full bug lifecycle</li>
+                        <li>Collaborate with developers to verify bug fixes and ensure quality releases</li>
+                        <li>Support test planning, review sessions, and prepare detailed test documentation</li>
+                        <li>Provide IT support and troubleshoot application and system issues for end users</li>
+                    </ul>
+                    <p class="timeline-projects-label">Projects Handled</p>
+                    <div class="timeline-projects">
+                        <div class="tproject-card">
+                            <div class="tproject-logo-wrap">
+                                <img src="images/more-power.png" alt="More Power">
+                            </div>
+                            <span>More Power</span>
+                        </div>
+                        <div class="tproject-card">
+                            <div class="tproject-logo-wrap">
+                                <img src="images/ileco3.png" alt="ILECO 3">
+                            </div>
+                            <span>ILECO 3</span>
+                        </div>
+                        <div class="tproject-card">
+                            <div class="tproject-logo-wrap">
+                                <img src="images/nepc.avif" alt="NEPC">
+                            </div>
+                            <span>NEPC</span>
+                        </div>
+                        <div class="tproject-card">
+                            <div class="tproject-logo-wrap">
+                                <img src="images/mlwd.jpg" alt="MLWD">
+                            </div>
+                            <span>MLWD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JOB 2 -->
+            <div class="timeline-item reveal d1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">Junior Software Developer</h3>
+                            <p class="timeline-company">GZONETECH INC</p>
+                        </div>
+                        <span class="timeline-date">November 2023 – July 2024</span>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Developed and maintained front-end features for UMS Light Meralco Ecozone using React.js and Material UI</li>
+                        <li>Built and enhanced modules for Pocket HR, an HR Management System, using PHP Laravel</li>
+                        <li>Wrote clean, reusable code and participated in code reviews to maintain code quality</li>
+                        <li>Performed debugging and resolved technical issues across front-end and back-end layers</li>
+                        <li>Managed MySQL databases and created Power BI dashboards for data visualization</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PORTFOLIO -->
+<section id="portfolio">
+    <div class="section">
+        <p class="section-label reveal">02 — Portfolio</p>
+        <h2 class="section-title reveal d1">What I've <span>Built</span></h2>
+
+        <div class="projects-grid">
+            <div class="project-card reveal d1 project-featured">
+                <div class="project-featured-badge">Featured</div>
+                <div class="project-num">// 01</div>
+                <h3 class="project-title">Nexcore Dynamics</h3>
+                <p class="project-desc">Advanced Technology Solutions — a modern, high-performance web platform built to deliver cutting-edge digital experiences with sleek UI and smooth interactions.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://nexcore-dynamics.vercel.app/" target="_blank" class="plink">↗ Live Demo</a>
+                    <a href="https://nexcore-dynamics.vercel.app/admin" target="_blank" class="plink">⚙ Admin</a>
+                    <a href="https://payroll-and-hr-management-system.vercel.app" target="_blank" class="plink">💼 Payroll & HRMS</a>
+                    <a href="https://github.com/cathcatapang11/nexcore-dynamics" target="_blank" class="plink">⌥ GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal d2">
+                <div class="project-num">// 02</div>
+                <h3 class="project-title">Cozy Travel & Tours</h3>
+                <p class="project-desc">A travel and tours management web application with an admin dashboard for managing bookings, tours, and customer information.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://cozy-blond.vercel.app/admin" target="_blank" class="plink">↗ Live Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal d3">
+                <div class="project-num">// 03</div>
+                <h3 class="project-title">Utility Solutions Industries</h3>
+                <p class="project-desc">A company website for Utility Solutions Industries — showcasing their services, solutions, and expertise in utility management systems.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://usiv21.vercel.app/#home" target="_blank" class="plink">↗ Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <p class="section-label reveal" style="margin-top:4rem;">03 — Skills</p>
+        <h2 class="section-title reveal d1">What I <span>Know</span></h2>
+
+        <div class="skills-cats">
+            <div class="skill-cat reveal d1">
+                <p class="skill-cat-title"><span class="skill-cat-icon">&lt;/&gt;</span> Front-End</p>
+                <ul class="skill-cat-list">
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript / TypeScript</li>
+                    <li>React.js</li>
+                    <li>Angular.js</li>
+                    <li>Material UI</li>
+                </ul>
+            </div>
+            <div class="skill-cat reveal d2">
+                <p class="skill-cat-title"><span class="skill-cat-icon">⚙</span> Back-End & Database</p>
+                <ul class="skill-cat-list">
+                    <li>PHP Laravel</li>
+                    <li>Django</li>
+                    <li>MySQL / MySQL Workbench</li>
+                    <li>Python</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+            <div class="skill-cat reveal d3">
+                <p class="skill-cat-title"><span class="skill-cat-icon">✓</span> QA & Tools</p>
+                <ul class="skill-cat-list">
+                    <li>Manual & Application Testing</li>
+                    <li>Test Case Writing & Documentation</li>
+                    <li>Debugging & Problem Solving</li>
+                    <li>Git / GitHub</li>
+                    <li>Microsoft Office Suite</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="soft-skills reveal d1">
+            <p class="skill-cat-title" style="margin-bottom:0.8rem;"><span class="skill-cat-icon">★</span> Soft Skills</p>
+            <div class="soft-tags">
+                <span class="soft-tag">Strong Communication</span>
+                <span class="soft-tag">Time Management</span>
+                <span class="soft-tag">Adaptability</span>
+                <span class="soft-tag">Hardworking & Eager to Learn</span>
+                <span class="soft-tag">Attention to Detail</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CONTACT -->
+<section id="contact">
+    <div class="section">
+        <p class="section-label reveal">04 — Contact</p>
+        <h2 class="section-title reveal d1">Get In <span>Touch</span></h2>
+
+        <div class="contact-grid">
+            <div class="reveal d1">
+                <p class="contact-intro">
+                    I'm always open to new opportunities, collaborations, or just a friendly chat.
+                    Whether you have a project in mind or just want to connect — don't hesitate to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:cathcatapang11@gmail.com" class="clink">
+                        <div class="clink-icon">✉</div>
+                        cathcatapang11@gmail.com
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="clink">
+                        <div class="clink-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:currentColor;">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </div>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/catherine-catapang-450900306/" target="_blank" class="clink">
+                        <div class="clink-icon" style="font-family:'Space Mono',monospace;font-size:0.8rem;font-weight:700;">in</div>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal d2" onsubmit="submitForm(event)">
+                <div class="fg">
+                    <label>Name</label>
+                    <input type="text" placeholder="Your name" required>
+                </div>
+                <div class="fg">
+                    <label>Email</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="fg">
+                    <label>Message</label>
+                    <textarea placeholder="What's on your mind?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Send Message →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    Designed & Built by <span>Catherine Catapang</span> — <span>2025</span>
+</footer>
+
+<script src="particles.js"></script>
+<script>
+/* ─── WELCOME SPLASH ─── */
+document.body.style.overflow = 'hidden';
+setTimeout(() => {
+    const overlay = document.getElementById('welcome');
+    overlay.classList.add('hide');
+    document.body.style.overflow = '';
+    setTimeout(() => overlay.remove(), 950);
+}, 3000);
+
+/* ─── TYPEWRITER ─── */
+const roles = ['Web Developer', 'React.js Developer', 'QA Tester', 'Problem Solver'];
+let ri = 0, ci = 0, del = false;
+const tw = document.getElementById('typewriter');
+
+function type() {
+    const word = roles[ri];
+    if (!del) {
+        tw.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { del = true; return setTimeout(type, 2000); }
+    } else {
+        tw.textContent = word.slice(0, --ci);
+        if (ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+    }
+    setTimeout(type, del ? 55 : 95);
+}
+setTimeout(type, 900);
+
+/* ─── HAMBURGER ─── */
+document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+});
+
+/* ─── SCROLL REVEAL ─── */
+const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ─── SKILL BARS ─── */
+const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            const bar = e.target.querySelector('.skill-fill');
+            if (bar) bar.style.width = bar.dataset.w + '%';
+        }
+    });
+}, { threshold: 0.4 });
+document.querySelectorAll('.skill-item').forEach(el => skillObs.observe(el));
+
+/* ─── ACTIVE NAV ON SCROLL ─── */
+const sections = ['hero', 'about', 'experience', 'portfolio', 'contact'];
+const navLinks = document.querySelectorAll('.nav-a');
+
+const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            navLinks.forEach(a => a.classList.remove('active'));
+            const link = document.querySelector(`.nav-a[href="#${e.target.id}"]`);
+            if (link) link.classList.add('active');
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObs.observe(el);
+});
+
+/* ─── NAV GLOW ON SCROLL + HERO PARALLAX ─── */
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.borderBottomColor =
+        window.scrollY > 60 ? 'rgba(0,229,255,0.12)' : 'rgba(255,255,255,0.06)';
+
+    /* hero parallax */
+    const heroContent = document.querySelector('#hero > div');
+    const sy = window.scrollY;
+    const vh = window.innerHeight;
+    if (heroContent && sy < vh) {
+        const p = sy / vh;
+        heroContent.style.transform = `translateY(${sy * 0.28}px)`;
+        heroContent.style.opacity   = Math.max(0, 1 - p * 1.4);
+    }
+});
+
+/* ─── CLOSE MOBILE NAV ON LINK CLICK ─── */
+navLinks.forEach(a => {
+    a.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('open');
+    });
+});
+
+
+/* ─── 3D CARD TILT ─── */
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const r  = card.getBoundingClientRect();
+        const x  = e.clientX - r.left;
+        const y  = e.clientY - r.top;
+        const rx = ((y - r.height / 2) / r.height) * -10;
+        const ry = ((x - r.width  / 2) / r.width)  *  10;
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
+        card.style.boxShadow = `${-ry}px ${rx}px 30px rgba(0,229,255,0.1)`;
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+    });
+});
+
+/* ─── STATS COUNTER ─── */
+const statObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el  = e.target;
+        const raw = el.textContent.replace(/[^0-9.]/g, '');
+        if (!raw) return;
+        const target = parseFloat(raw);
+        const isFloat = raw.includes('.');
+        const suffix  = el.textContent.replace(/[0-9.]/g, '');
+        let start = 0;
+        const step = target / 60;
+        const timer = setInterval(() => {
+            start += step;
+            if (start >= target) {
+                el.textContent = (isFloat ? target.toFixed(1) : target) + suffix;
+                clearInterval(timer);
+            } else {
+                el.textContent = (isFloat ? start.toFixed(1) : Math.floor(start)) + suffix;
+            }
+        }, 20);
+        statObs.unobserve(el);
+    });
+}, { threshold: 0.8 });
+document.querySelectorAll('.stat-n').forEach(el => statObs.observe(el));
+
+/* ─── CURSOR GLOW ─── */
+(function() {
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    window.addEventListener('mousemove', e => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top  = e.clientY + 'px';
+    });
+})();
+
+/* ─── AMBIENT ORBS ─── */
+(function() {
+    ['amb-orb-1','amb-orb-2','amb-orb-3'].forEach(cls => {
+        const orb = document.createElement('div');
+        orb.className = 'amb-orb ' + cls;
+        document.body.appendChild(orb);
+    });
+})();
+
+/* ─── FORM via EmailJS ─── */
+emailjs.init('My02on0G3DvabJnhF');
+
+function submitForm(e) {
+    e.preventDefault();
+    const btn  = document.getElementById('submit-btn');
+    const form = e.target;
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    emailjs.send('service_9xtsf7w', 'template_y0muwt4', {
+        name:    form.querySelector('input[type="text"]').value,
+        email:   form.querySelector('input[type="email"]').value,
+        message: form.querySelector('textarea').value,
+        title:   'Portfolio Contact',
+        time:    new Date().toLocaleString(),
+    })
+    .then(() => {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = '#00ff88';
+        btn.style.color = '#000';
+        form.reset();
+        setTimeout(() => {
+            btn.textContent = 'Send Message →';
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.disabled = false;
+        }, 3000);
+    })
+    .catch(() => {
+        btn.textContent = 'Failed — Try Again';
+        btn.style.background = '#ff006e';
+        btn.style.color = '#fff';
+        btn.disabled = false;
+    });
+}
+</script>
+
+</body>
+</html>

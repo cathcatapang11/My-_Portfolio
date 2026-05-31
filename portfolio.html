@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine Catapang | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="images/my logo.png" alt="Catherine Catapang Logo"><span class="nav-logo-text">DEVCATCH</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <p class="page-label">02 — Portfolio</p>
+    <h1 class="page-title">My <span>Work.</span></h1>
+</div>
+<div class="page-divider"></div>
+
+<!-- PROJECTS -->
+<div class="section">
+    <p class="section-label reveal">Projects</p>
+    <h2 class="section-title reveal d1">What I've <span>Built</span></h2>
+
+    <div class="projects-grid">
+        <div class="project-card reveal d1">
+            <div class="project-num">// 01</div>
+            <h3 class="project-title">UMS Meralco Ecozone</h3>
+            <p class="project-desc">A full-stack web application with real-time features and a modern UI. Built with performance and scalability in mind from day one.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="plink">↗ Live Demo</a>
+                <a href="#" class="plink">⌥ GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card reveal d2">
+            <div class="project-num">// 02</div>
+            <h3 class="project-title">UMS Meralco Ecozone</h3>
+            <p class="project-desc">An elegant mobile-first design system with reusable components and buttery-smooth animations across all devices and screen sizes.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Next.js</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="plink">↗ Live Demo</a>
+                <a href="#" class="plink">⌥ GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-card reveal d3">
+            <div class="project-num">// 03</div>
+            <h3 class="project-title">Project Gamma</h3>
+            <p class="project-desc">A data visualization dashboard that turns complex datasets into clear, interactive, and actionable insights for end users.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">D3.js</span>
+                <span class="tag">REST API</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="plink">↗ Live Demo</a>
+                <a href="#" class="plink">⌥ GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <p class="section-label reveal">Skills</p>
+    <h2 class="section-title reveal d1">What I <span>Know</span></h2>
+
+    <div class="skills-grid">
+        <div class="skill-item reveal d1">
+            <div class="skill-header"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-pct">96%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="96"></div></div>
+        </div>
+        <div class="skill-item reveal d2">
+            <div class="skill-header"><span class="skill-name">HTML & CSS</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="92"></div></div>
+        </div>
+        <div class="skill-item reveal d1">
+            <div class="skill-header"><span class="skill-name">React.js</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-item reveal d2">
+            <div class="skill-header"><span class="skill-name">Node.js & Express</span><span class="skill-pct">83%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="83"></div></div>
+        </div>
+        <div class="skill-item reveal d1">
+            <div class="skill-header"><span class="skill-name">TypeScript</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-item reveal d2">
+            <div class="skill-header"><span class="skill-name">Next.js</span><span class="skill-pct">77%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-w="77"></div></div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    Designed & Built by <span>Catherine Catapang</span> — <span>2025</span>
+</footer>
+
+<script src="particles.js"></script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+});
+
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.borderBottomColor =
+        window.scrollY > 60 ? 'rgba(0,229,255,0.12)' : 'rgba(255,255,255,0.06)';
+});
+
+/* reveal */
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* skill bars */
+const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            const bar = e.target.querySelector('.skill-fill');
+            if (bar) bar.style.width = bar.dataset.w + '%';
+        }
+    });
+}, { threshold: 0.4 });
+document.querySelectorAll('.skill-item').forEach(el => skillObs.observe(el));
+</script>
+
+</body>
+</html>

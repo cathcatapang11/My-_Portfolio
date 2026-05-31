@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine Catapang | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="images/my logo.png" alt="Catherine Catapang Logo"><span class="nav-logo-text">DEVCATCH</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <p class="page-label">04 — Contact</p>
+    <h1 class="page-title">Let's <span>Talk.</span></h1>
+</div>
+<div class="page-divider"></div>
+
+<!-- CONTACT CONTENT -->
+<div class="section">
+    <div class="contact-grid">
+        <div class="reveal">
+            <p class="contact-intro">
+                I'm always open to new opportunities, collaborations, or just a friendly chat.
+                Whether you have a project in mind or just want to connect — don't hesitate to reach out!
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:cathcatapang11@gmail.com" class="clink">
+                    <div class="clink-icon">✉</div>
+                    cathcatapang11@gmail.com
+                </a>
+                <a href="https://github.com/" target="_blank" class="clink">
+                    <div class="clink-icon" style="font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;">GH</div>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/catherine-catapang-450900306/" target="_blank" class="clink">
+                    <div class="clink-icon" style="font-family:'Space Mono',monospace;font-size:0.8rem;font-weight:700;">in</div>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <form class="contact-form reveal d2" onsubmit="submitForm(event)">
+            <div class="fg">
+                <label>Name</label>
+                <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="fg">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="fg">
+                <label>Message</label>
+                <textarea placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Send Message →</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    Designed & Built by <span>Catherine Catapang</span> — <span>2025</span>
+</footer>
+
+<script src="particles.js"></script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+});
+
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.borderBottomColor =
+        window.scrollY > 60 ? 'rgba(0,229,255,0.12)' : 'rgba(255,255,255,0.06)';
+});
+
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function submitForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#00ff88';
+    btn.style.color = '#000';
+    setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        btn.style.color = '';
+        e.target.reset();
+    }, 3000);
+}
+</script>
+
+</body>
+</html>

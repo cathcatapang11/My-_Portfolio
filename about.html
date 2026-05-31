@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine Catapang | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="images/my logo.png" alt="Catherine Catapang Logo"><span class="nav-logo-text">DEVCATCH</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <p class="page-label">01 — About</p>
+    <h1 class="page-title">Who I <span>Am.</span></h1>
+</div>
+<div class="page-divider"></div>
+
+<!-- ABOUT CONTENT -->
+<div class="section">
+    <div class="about-grid">
+        <div class="about-img-wrapper reveal">
+            <div class="about-img-box">
+                👩‍💻
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+            </div>
+        </div>
+
+        <div class="about-text reveal d1">
+            <p>Hi! I'm <strong>Catherine Catapang</strong>, a passionate <strong>JavaScript developer</strong> who loves building beautiful, functional digital experiences from the ground up.</p>
+            <p>I specialize in the JavaScript ecosystem — from interactive frontends with <strong>React</strong> to scalable backends with <strong>Node.js</strong>. I'm always learning, always building, and always pushing the limits of what JS can do.</p>
+            <p>When I'm not coding, you'll find me exploring new technologies, working on creative side projects, or leveling up my problem-solving skills one bug at a time.</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-n">10+</div>
+                    <div class="stat-l">Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">2+</div>
+                    <div class="stat-l">Years Exp</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">∞</div>
+                    <div class="stat-l">Curiosity</div>
+                </div>
+            </div>
+
+            <p class="badges-label">Tech Stack</p>
+            <div class="tech-badges">
+                <span class="badge">JavaScript</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">React.js</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">REST APIs</span>
+                <span class="badge">Git</span>
+                <span class="badge">HTML & CSS</span>
+            </div>
+
+            <div style="margin-top:2.5rem;">
+                <a href="portfolio.html" class="btn btn-primary">See My Work →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    Designed & Built by <span>Catherine Catapang</span> — <span>2025</span>
+</footer>
+
+<script src="particles.js"></script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+});
+
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.borderBottomColor =
+        window.scrollY > 60 ? 'rgba(0,229,255,0.12)' : 'rgba(255,255,255,0.06)';
+});
+
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
